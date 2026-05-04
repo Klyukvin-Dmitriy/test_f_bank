@@ -1,0 +1,38 @@
+name: CI (Selenium)
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  selenium-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v1
+
+      - name: Start static server
+        run: |
+          nohup python -m http.server 8000 >/tmp/http.log 2>&1 &
+          sleep 1
+
+      - name: Run pytest (expected to fail due to known bugs)
+        env:
+          BASE_URL: http://localhost:8000
+        run: |
+          pytest -q
+
