@@ -29,6 +29,8 @@ python -m http.server 8000
 python -m pip install -r requirements.txt
 ```
 
+Примечание: драйвер браузера подбирается автоматически через Selenium Manager (встроен в Selenium 4), поэтому отдельно ставить ChromeDriver не нужно.
+
 ### Запуск
 
 1. В одном терминале запустить приложение:
