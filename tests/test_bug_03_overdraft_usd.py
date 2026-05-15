@@ -6,6 +6,7 @@ def test_usd_overdraft_should_be_rejected(driver, base_url):
     Ожидаем корректное поведение: при выборе USD счёта (баланс 100 $) нельзя перевести 1000 $.
     В приложении логика недостатка средств зависит от query params balance/reserved, а не от баланса выбранного счёта.
     Мы специально открываем страницу с большим RUB balance, чтобы дефект проявился и тест упал (красный CI).
+    Дефект: https://github.com/Klyukvin-Dmitriy/test_f_bank/issues/3
     """
     page = TransferPage(driver, base_url).open("/?balance=100000&reserved=0")
     page.select_usd_account()

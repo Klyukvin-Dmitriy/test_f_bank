@@ -5,9 +5,9 @@
 - **Минимум 2 дефекта найдены**: найдено 3 (BUG-01..BUG-03) ✅
 
 ## Баг-репорты
-- **BUG-01**: `docs/bug-reports/BUG-01.md` ✅
-- **BUG-02**: `docs/bug-reports/BUG-02.md` ✅
-- **BUG-03**: `docs/bug-reports/BUG-03.md` ✅
+- **BUG-01**: [GitHub Issue #1](https://github.com/Klyukvin-Dmitriy/test_f_bank/issues/1) + `docs/bug-reports/BUG-01.md` ✅
+- **BUG-02**: [GitHub Issue #2](https://github.com/Klyukvin-Dmitriy/test_f_bank/issues/2) + `docs/bug-reports/BUG-02.md` ✅
+- **BUG-03**: [GitHub Issue #3](https://github.com/Klyukvin-Dmitriy/test_f_bank/issues/3) + `docs/bug-reports/BUG-03.md` ✅
 
 ## Автоматизация
 - **По автотесту на каждый дефект** ✅

@@ -18,8 +18,25 @@ python -m http.server 8000
 ## 2) Документация
 
 - Ручные тесты: `docs/manual-tests.md`
-- Баг-репорты: `docs/bug-reports/BUG-01.md`, `docs/bug-reports/BUG-02.md`, `docs/bug-reports/BUG-03.md`
 - Чек-лист соответствия: `docs/checklist.md`
+
+### Баг-репорты (GitHub Issues)
+
+Официальная фиксация дефектов — во вкладке [Issues](https://github.com/Klyukvin-Dmitriy/test_f_bank/issues):
+
+| Дефект | Issue | Ручной тест | Автотест |
+|--------|-------|-------------|----------|
+| BUG-01 — перевод 0 ₽ | [#1](https://github.com/Klyukvin-Dmitriy/test_f_bank/issues/1) | TC-03 | `tests/test_bug_01_zero_amount.py` |
+| BUG-02 — отрицательная сумма | [#2](https://github.com/Klyukvin-Dmitriy/test_f_bank/issues/2) | TC-04 | `tests/test_bug_02_negative_amount.py` |
+| BUG-03 — USD сверх баланса | [#3](https://github.com/Klyukvin-Dmitriy/test_f_bank/issues/3) | TC-05 | `tests/test_bug_03_overdraft_usd.py` |
+
+Копии баг-репортов в репозитории: `docs/bug-reports/BUG-01.md`, `BUG-02.md`, `BUG-03.md`.
+
+Если Issues ещё не созданы, выполните один раз (нужен `gh auth login`):
+
+```powershell
+.\scripts\create_github_issues.ps1
+```
 
 ## 3) Автотесты (pytest + Selenium)
 

@@ -5,6 +5,7 @@ def test_zero_amount_should_be_rejected(driver, base_url):
     """
     Ожидаем корректное поведение: сумма 0 должна быть запрещена.
     Текущая реализация позволяет перевод 0 → тест должен падать (красный CI).
+    Дефект: https://github.com/Klyukvin-Dmitriy/test_f_bank/issues/1
     """
     page = TransferPage(driver, base_url).open("/")
     page.select_rub_account()
